@@ -3,19 +3,26 @@ package com.bridgelabz;
 public class MoodAnalyzer {
     String message;
 
-    public MoodAnalyzer(Object o) {
+    public MoodAnalyzer() {
         super();
         this.message = message;
     }
 
-    public String analyseMood() {
+    public String analyseMood() throws Exception {
+
         try {
-            String words[] = message.split(" ");
-            if (words[3].equalsIgnoreCase("happy"))
+            if (message.equalsIgnoreCase("I am in sad mood"))
                 return "SAD";
-            return "HAPPY";
-        } catch (NullPointerException e) {
-            return "HAPPY";
+            else if (message.equalsIgnoreCase("I am in any mood"))
+                return "HAPPY";
+            else if (message.isEmpty() || message == null)
+                throw new MoodAnalyzerException("Invalid Mood");
+            else
+                return "No match found";
+
+        } catch (MoodAnalyzerException e) {
+            e.printStackTrace();
+            return "Invalid mood";
         }
     }
 }
