@@ -1,18 +1,17 @@
 package com.bridgelabz;
 import org.junit.Assert;
-import org.junit.Test;
 
 class MoodAnalyzerTest {
 
     void givenMessage_WhenSad_ShouldReturnSad() {
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in Sad Mood");
-        String mood = moodAnalyzer.analyseMood();
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
+        String mood = moodAnalyzer.analyseMood("I am in sad mood ");
         Assert.assertEquals("SAD",mood);
     }
 
     void givenMessage_WhenHappy_ShouldReturnHappy() {
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in Any Mood");
-        String mood  = moodAnalyzer.analyseMood();
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
+        String mood  = moodAnalyzer.analyseMood("I am in sad mood ");
         Assert.assertEquals("Happy",mood);
     }
 }
