@@ -3,7 +3,7 @@ package com.bridgelabz;
 public class MoodAnalyzer {
     String message;
 
-    public MoodAnalyzer(Object o) {
+    public MoodAnalyzer(String message) {
         super();
         this.message = message;
     }
