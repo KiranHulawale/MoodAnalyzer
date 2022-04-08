@@ -9,7 +9,7 @@ public class MoodAnalyzer {
 
     public String analyseMood(String message) {
         String words[] = message.split(" ");
-        if (words[3].equalsIgnoreCase("sad"))
+        if (words[3].equalsIgnoreCase("happy"))
             return "SAD";
         return "HAPPY";
     }
